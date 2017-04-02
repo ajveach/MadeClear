@@ -1,0 +1,22 @@
+@import "../../styles/variables/colors";
+
+.core-layout__viewport {
+  //padding-top: 4rem;
+}
+
+.popover{
+  font-size:2rem;
+
+  .popover-title{
+    font-size:2rem;
+    font-weight:bold;
+  }
+}
+
+.label-info{
+  background-color:$color3;
+}
+
+.label-warning{
+  background-color:$color2;
+}

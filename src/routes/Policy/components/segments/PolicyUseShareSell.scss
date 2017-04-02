@@ -1,0 +1,18 @@
+@import "../../PolicyDisplay.scss";
+@import "../../../../styles/variables/colors";
+
+.policy-use-share-sell{
+  padding-top:50px;
+}
+
+.how-we-use-identifiable-data{
+
+}
+
+.how-we-share-data-externally{
+  background: $lightGray;
+}
+
+.who-we-sell-data-to{
+  @extend .segment-list;
+}

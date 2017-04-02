@@ -1,0 +1,53 @@
+@import "../../../../styles/variables/colors";
+
+.policy-intro{
+  background-image:url("../../assets/buildings.jpg");
+  background-position: center bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: $color2;
+  color:white;
+
+  @media (min-width: 768px){
+    min-height:500px;
+  }
+
+
+  .content{
+    width: 100%;
+    padding:1rem;
+
+    @media (min-width: 768px){
+      padding: 120px 5rem;
+    }
+
+    p{
+      margin-top:2rem;
+    }
+  }
+
+  .page-title{
+    font-size: 6rem;
+    margin: 0 auto;
+    font-weight: bold;
+  }
+
+  .scroll-arrow{
+    background: #50c5b7;
+    border: 7px solid #fff;
+    font-size: 7rem;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin-top: -30px;
+    transform: translateY(70px);
+    color: white;
+    line-height: 90px;
+    cursor: pointer;
+
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}

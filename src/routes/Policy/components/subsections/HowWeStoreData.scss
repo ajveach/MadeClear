@@ -1,0 +1,8 @@
+@import "../../PolicyDisplay.scss";
+@import "../../../../styles/variables/colors";
+
+.how-we-store-data{
+  @extend .segment-list;
+
+  background: $lightGray;
+}

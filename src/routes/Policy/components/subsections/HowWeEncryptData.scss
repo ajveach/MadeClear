@@ -1,0 +1,65 @@
+@import "../../PolicyDisplay.scss";
+@import "../../../../styles/variables/colors";
+
+.how-we-encrypt-data{
+  @extend .segment-list;
+
+  background-image: url("../../assets/data-center-lg.jpg");
+  background-size: cover;
+  position: relative;
+
+  &:before{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    z-index: 0;
+    background-color: black;
+  }
+
+  color:white;
+  text-shadow: 1px 1px 5px rgba(0,0,0,.7);
+
+  .encrypt-graphic{
+    font-size:5em;
+    text-align: center;
+
+    .fa {
+      transition: color 0.25s ease;
+
+      &:hover {
+        color: $color5;
+      }
+    }
+  }
+
+  .response-with-bg-image{
+    &:before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: .2;
+      z-index: -1;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .encrypt-device{
+    &:before {
+      background-image: url("../../../../../public/img/icons/phone.png");
+    }
+  }
+
+  .encrypt-server{
+    &:before {
+      background-image: url("../../../../../public/img/icons/server.svg");
+    }
+  }
+}
