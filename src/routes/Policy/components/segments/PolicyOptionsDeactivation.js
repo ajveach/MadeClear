@@ -1,5 +1,7 @@
 import React from 'react';
 
+import "./PolicyOptionsDeactivation.scss";
+
 // import sub sections
 import HowTechnologyAccessesData from "../subsections/HowTechnologyAccessesData";
 import WhatCanYouDo from "../subsections/WhatCanYouDo";

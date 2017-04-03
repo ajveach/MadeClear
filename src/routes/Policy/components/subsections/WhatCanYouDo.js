@@ -1,7 +1,30 @@
 import React from "react";
-import { Grid } from "react-bootstrap";
+import { Grid, Image } from 'react-bootstrap'
 
 import BulletList from "../dataDisplays/BulletList";
+
+import "./WhatCanYouDo.scss";
+
+let imageInfo = {
+  "Access": "07Icon2.png",
+  "Edit": "08Icon2.png",
+  "Share": "",
+  "Delete": "09Icon2.png"
+};
+
+function actionGrid(actions){
+  let actionGridItems = [];
+  actions.map((action) => {
+    actionGridItems.push(
+      <div className="grid-item">
+        <Image src={"/img/icons/" + imageInfo[action]}/>
+        <div className="grid-item-label">{action}</div>
+      </div>
+    );
+  });
+
+  return actionGridItems;
+}
 
 export default class WhatCanYouDo extends React.Component{
   render(){
@@ -9,14 +32,10 @@ export default class WhatCanYouDo extends React.Component{
       <div className="what-can-you-do">
         <Grid>
           <h2 className="segment-title">What can you do with the data we collect?</h2>
-          <BulletList>
-            <h3 className="segment-subtitle">With the data we store you can</h3>
-            <ul>
-              <li>access</li>
-              <li>delete</li>
-            </ul>
-          </BulletList>
-          <a href="http://www.google.com" target="_blank">How would you delete this data?</a>
+          <h3 className="segment-subtitle">With the data we store you can:</h3>
+          <div className="action-grid">
+            {actionGrid(['Access','Edit','Delete'])}
+          </div>
         </Grid>
       </div>
     )

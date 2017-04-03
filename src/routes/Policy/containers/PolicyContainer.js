@@ -45,8 +45,8 @@ const PolicyContainer = (props) => (
   <div className="policy-display">
     <PolicyIntro {...props}/>
     <PolicyUseShareSell {...props}/>
-    <PolicyStoreEncypt {...props}/>
     <PolicyOptionsDeactivation {...props}/>
+    <PolicyStoreEncypt {...props}/>
     <PolicyPolicies {...props}/>
     <Footer {...props}/>
   </div>

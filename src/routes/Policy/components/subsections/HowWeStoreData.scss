@@ -5,4 +5,8 @@
   @extend .segment-list;
 
   background: $lightGray;
+
+  .segment-subtitle{
+    margin-top: 40px;
+  }
 }

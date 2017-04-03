@@ -1,15 +1,19 @@
 .policy-display{
   margin:0 auto;
-  font-size:1.5em;
+  font-size:1.3em;
 }
 
 .policy-segment{
-  padding: 2rem 0;
+  padding: 0;
 }
 
 .segment-title{
   font-weight:bold;
-  font-size:4rem;
+  font-size:3.5rem;
+  text-align:center;
+  max-width:800px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .segment-subtitle{
@@ -62,4 +66,34 @@
   font-size: 1.6rem;
   text-align: center;
   margin: 1rem 0 0;
+}
+
+.segment-icon{
+  text-align: center;
+  padding-top: 20px;
+
+  img{
+    width: 100%;
+
+    @media (min-width: 768px){
+      width: 180px;
+    }
+  }
+}
+
+// Grid
+.grid-item{
+  display:inline-block;
+  width:100%;
+
+  @media (min-width: 768px){
+    width:150px;
+    margin:0 30px 15px;
+  }
+}
+
+.grid-item-label{
+  font-weight:bold;
+  font-size:1.6rem;
+  margin-top:1rem;
 }

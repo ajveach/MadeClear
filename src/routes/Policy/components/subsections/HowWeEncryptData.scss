@@ -7,6 +7,8 @@
   background-image: url("../../assets/data-center-lg.jpg");
   background-size: cover;
   position: relative;
+  color:white;
+  text-shadow: 1px 1px 5px rgba(0,0,0,.7);
 
   &:before{
     content: " ";
@@ -20,8 +22,11 @@
     background-color: black;
   }
 
-  color:white;
-  text-shadow: 1px 1px 5px rgba(0,0,0,.7);
+  .segment-title{
+    margin-left:0;
+    margin-right:0;
+    text-align:left;
+  }
 
   .encrypt-graphic{
     font-size:5em;
