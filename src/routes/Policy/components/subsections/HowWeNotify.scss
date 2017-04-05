@@ -1,0 +1,14 @@
+.how-we-notify{
+  padding:60px 0;
+
+  .content{
+    @media (min-width: 1200px){
+      width:80%;
+      margin:0 auto;
+    }
+  }
+
+  h3,p {
+    text-align: left;
+  }
+}

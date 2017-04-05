@@ -1,0 +1,29 @@
+@import '../../../../styles/variables/colors.scss';
+
+footer{
+  background: $darkGray;
+  color: white;
+  padding:40px 0;
+  
+  a{
+    color: white;
+
+    &:hover{
+      color: white;
+      text-decoration: underline;
+    }
+  }
+
+  .segment-title{
+    margin-bottom:40px;
+    text-align: left;
+  }
+
+  .last-updated{
+    font-size: .8em;
+  }
+}
+
+.footer-col{
+  text-align: left;
+}

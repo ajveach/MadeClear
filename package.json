@@ -1,7 +1,7 @@
 {
-  "name": "react-redux-starter-kit",
-  "version": "3.0.0-alpha.2",
-  "description": "Get started with React, Redux, and React-Router!",
+  "name": "mpn-generator",
+  "version": "1.0.0",
+  "description": "Build clear and informative privacy policy displays",
   "main": "index.js",
   "engines": {
     "node": ">=4.5.0",

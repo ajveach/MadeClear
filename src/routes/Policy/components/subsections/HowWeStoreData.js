@@ -13,7 +13,7 @@ export default class HowWeStoreData extends React.Component{
           <div className="content">
             <h2 className="segment-title">How we store your data</h2>
             <Row>
-              <Col md={3} class="segment-icon">
+              <Col md={3} className="segment-icon">
                 <Image src="/img/icons/03Icon.png"/>
               </Col>
               <Col md={8} mdOffset={1}>

@@ -1,0 +1,9 @@
+.what-happens-to-data{
+  padding-top:40px;
+
+  p{
+    @media (min-width: 768px){
+      margin-top:80px;
+    }
+  }
+}
