@@ -7,7 +7,7 @@ export default class DoesOrDoesnt extends React.Component{
     let postText = this.props.postText || "";
 
     return(
-      <div className="does-or-doesnt">{preText}<strong>{text}</strong> {this.props.children} <span class="post-text">{postText}</span></div>
+      <div className="does-or-doesnt">{preText}<strong>{text}</strong> {this.props.children} <span className="post-text">{postText}</span></div>
     )
   }
 }

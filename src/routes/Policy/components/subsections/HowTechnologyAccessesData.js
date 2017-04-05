@@ -12,9 +12,9 @@ let permissionImages = {
 
 function permissionGrid(permissions){
   let permissionGridItems = [];
-  permissions.map((permission) => {
+  permissions.map((permission, i) => {
     permissionGridItems.push(
-      <div className="grid-item">
+      <div className="grid-item" key={i}>
         <Image src={"/img/icons/" + permissionImages[permission]}/>
         <div className="grid-item-label">{permission}</div>
       </div>
@@ -30,7 +30,7 @@ export default class HowTechnologyAccessesData extends React.Component{
       <div className="how-technology-accesses-data">
         <Grid>
           <h2 className="segment-title">How this technology accesses other data</h2>
-          <h3 class="segment-subtitle">With your permission this app connects to:</h3>
+          <h3 className="segment-subtitle">With your permission this app connects to:</h3>
           <div className="permission-grid">
             {permissionGrid(["Location","Images","Contacts"])}
           </div>

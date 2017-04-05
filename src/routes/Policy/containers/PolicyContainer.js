@@ -15,17 +15,21 @@ import PolicyOptionsDeactivation from "../components/segments/PolicyOptionsDeact
 import PolicyPolicies from "../components/segments/PolicyPolicies";
 import Footer from "../components/Footer/Footer";
 
+import { getPolicy } from '../../../actions/get_policy';
+
 /*  Object of action creators (can also be function that returns object).
     Keys will be passed as props to presentational components. Here we are
     implementing our wrapper around increment; the component doesn't care   */
 
-const mapDispatchToProps = {
-  increment : () => increment(1),
-}
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onGetPolicy: (company, product) => dispatch(getPolicy(company, product))
+  }
+};
 
 const mapStateToProps = (state) => ({
-  counter : state.counter
-})
+
+});
 
 /*  Note: mapStateToProps is where you should use `reselect` to create selectors, ie:
 
@@ -41,15 +45,23 @@ const mapStateToProps = (state) => ({
     Selectors are composable. They can be used as input to other selectors.
     https://github.com/reactjs/reselect    */
 
-const PolicyContainer = (props) => (
-  <div className="policy-display">
-    <PolicyIntro {...props}/>
-    <PolicyUseShareSell {...props}/>
-    <PolicyOptionsDeactivation {...props}/>
-    <PolicyStoreEncypt {...props}/>
-    <PolicyPolicies {...props}/>
-    <Footer {...props}/>
-  </div>
-)
+class PolicyContainer extends React.Component {
+  componentDidMount(){
+    this.props.onGetPolicy(this.props.params.companyName, this.props.params.productName);
+  }
+
+  render() {
+    return (
+      <div className="policy-display">
+        <PolicyIntro {...this.props}/>
+        <PolicyUseShareSell {...this.props}/>
+        <PolicyOptionsDeactivation {...this.props}/>
+        <PolicyStoreEncypt {...this.props}/>
+        <PolicyPolicies {...this.props}/>
+        <Footer {...this.props}/>
+      </div>
+    )
+  }
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(PolicyContainer)

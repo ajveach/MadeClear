@@ -14,9 +14,9 @@ let imageInfo = {
 
 function actionGrid(actions){
   let actionGridItems = [];
-  actions.map((action) => {
+  actions.map((action, i) => {
     actionGridItems.push(
-      <div className="grid-item">
+      <div className="grid-item" key={i}>
         <Image src={"/img/icons/" + imageInfo[action]}/>
         <div className="grid-item-label">{action}</div>
       </div>
