@@ -1,0 +1,27 @@
+@import "../../../styles/variables/colors";
+
+.generate-intro{
+  background-image:url("../../Policy/assets/buildings.jpg");
+  background-position: center bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: $color2;
+  color:white;
+
+  .content{
+    width: 100%;
+    padding:1rem;
+
+    @media (min-width: 768px){
+      padding: 120px 5rem;
+    }
+  }
+
+  .page-title {
+    font-size: 6rem;
+    margin: 0 auto;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0,0,0,1);
+  }
+}
