@@ -22,5 +22,5 @@ export default class YesNo extends React.Component {
 
 YesNo.propTypes = {
   subtext: React.PropTypes.string,
-  value: React.propTypes.string
+  value: React.PropTypes.string
 }
