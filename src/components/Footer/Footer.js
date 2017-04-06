@@ -7,7 +7,7 @@ import './Footer.scss'
 export default class Footer extends React.Component {
   render () {
     return (
-      <footer>
+      <footer id='footer'>
         <Grid>
           <h2 className='segment-title'>Anything unclear? Contact us.</h2>
           <Row>

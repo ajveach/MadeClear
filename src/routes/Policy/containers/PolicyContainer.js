@@ -8,6 +8,7 @@ import '../PolicyDisplay.scss'
     wiring in the actions and state necessary to render a presentational
     component - in this case, the counter:   */
 
+import PolicyScrollspy from '../components/util/PolicyScrollspy'
 import PolicyIntro from '../components/segments/PolicyIntro'
 import PolicyUseShareSell from '../components/segments/PolicyUseShareSell'
 import PolicyStoreEncypt from '../components/segments/PolicyStoreEncypt'
@@ -53,6 +54,7 @@ class PolicyContainer extends React.Component {
   render () {
     return (
       <div className='policy-display'>
+        <PolicyScrollspy {...this.props} />
         <PolicyIntro {...this.props} />
         <PolicyUseShareSell {...this.props} />
         <PolicyOptionsDeactivation {...this.props} />

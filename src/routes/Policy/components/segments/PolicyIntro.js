@@ -13,7 +13,7 @@ export const PolicyIntro = (props) => (
           </div>
           <div className='col-md-2'>
             <a href='https://en.wikipedia.org/wiki/Acme_Corporation' target='_blank'>
-              <img src='/img/logos/placeholder.png' alt='{props.params.companyName}' />
+              <img src='/img/logos/solar-logistix.png' alt='{props.params.companyName}' />
             </a>
           </div>
         </div>

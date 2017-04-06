@@ -142,6 +142,7 @@
     "react-bootstrap": "^0.30.8",
     "react-google-charts": "^1.5.4-alpha.1",
     "react-scroll": "^1.4.7",
+    "react-scrollspy": "^2.6.4",
     "redbox-react": "^1.2.10",
     "redux-thunk": "^2.2.0",
     "sinon": "^1.17.5",

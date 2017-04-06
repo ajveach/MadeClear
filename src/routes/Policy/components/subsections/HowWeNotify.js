@@ -11,7 +11,7 @@ export default class HowWeNotify extends React.Component {
           <div className='content'>
             <Row>
               <Col md={3} className='segment-icon'>
-                <Image src='/img/icons/mail.png' />
+                <Image src='/img/icons/11Icon.png' />
               </Col>
               <Col md={9}>
                 <h3 className='segment-subtitle'>How we will notify you if our privacy policy changes</h3>
