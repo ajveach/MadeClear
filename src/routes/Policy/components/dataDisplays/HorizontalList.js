@@ -1,13 +1,20 @@
-import React from "react";
+import React from 'react'
 
-import "./HorizontalList.scss";
+import './HorizontalList.scss'
 
-export default class HorizontalList extends React.Component{
-  render(){
-    return(
-      <ul className="horizontal-list">
+export default class HorizontalList extends React.Component {
+  render () {
+    return (
+      <ul className='horizontal-list'>
         {this.props.children}
       </ul>
     )
   }
+}
+
+HorizontalList.propTypes = {
+  children: React.PropTypes.oneOfType([
+    React.PropTypes.string,
+    React.PropTypes.array
+  ])
 }

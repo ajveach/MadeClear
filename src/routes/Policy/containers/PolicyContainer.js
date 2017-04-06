@@ -65,3 +65,8 @@ class PolicyContainer extends React.Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(PolicyContainer)
+
+PolicyContainer.propTypes = {
+  onGetPolicy: React.PropTypes.func,
+  params: React.PropTypes.object
+}

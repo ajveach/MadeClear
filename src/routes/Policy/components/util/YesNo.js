@@ -1,21 +1,26 @@
-import React from 'react';
+import React from 'react'
 
-export default class YesNo extends React.Component{
-  renderSubtext(){
-    if(this.props.subtext){
+export default class YesNo extends React.Component {
+  renderSubtext () {
+    if (this.props.subtext) {
       return (
-        <span className="subtext">{this.props.subtext}</span>
+        <span className='subtext'>{this.props.subtext}</span>
       )
     }
-    return "";
+    return ''
   }
 
-  render(){
+  render () {
     return (
-      <div className={"yes-or-no " + this.props.value}>
-        <span className="value">{this.props.value}</span>
+      <div className={'yes-or-no ' + this.props.value}>
+        <span className='value'>{this.props.value}</span>
         {this.renderSubtext()}
       </div>
     )
   }
+}
+
+YesNo.propTypes = {
+  subtext: React.PropTypes.string,
+  value: React.propTypes.string
 }

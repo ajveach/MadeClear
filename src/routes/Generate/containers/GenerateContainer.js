@@ -1,17 +1,14 @@
 import { connect } from 'react-redux'
-import React from "react"
-
-
+import React from 'react'
 
 /*  This is a container component. Notice it does not contain any JSX,
     nor does it import React. This component is **only** responsible for
     wiring in the actions and state necessary to render a presentational
     component - in this case, the counter:   */
 
-import Intro from "../components/Intro";
-import Footer from "../../../components/Footer/Footer";
-import Form from "../components/Form";
-
+import Intro from '../components/Intro'
+import Footer from '../../../components/Footer/Footer'
+import Form from '../components/Form'
 
 /*  Object of action creators (can also be function that returns object).
     Keys will be passed as props to presentational components. Here we are
@@ -19,11 +16,11 @@ import Form from "../components/Form";
 
 const mapDispatchToProps = (dispatch) => ({
 
-});
+})
 
 const mapStateToProps = (state) => ({
 
-});
+})
 
 /*  Note: mapStateToProps is where you should use `reselect` to create selectors, ie:
 
@@ -40,12 +37,12 @@ const mapStateToProps = (state) => ({
     https://github.com/reactjs/reselect    */
 
 class GenerateContainer extends React.Component {
-  render() {
+  render () {
     return (
-      <div className="generate-display">
-        <Intro {...this.props}/>
-        <Form {...this.props}/>
-        <Footer {...this.props}/>
+      <div className='generate-display'>
+        <Intro {...this.props} />
+        <Form {...this.props} />
+        <Footer {...this.props} />
       </div>
     )
   }

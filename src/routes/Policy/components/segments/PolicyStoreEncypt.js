@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react'
 
-import './PolicyStoreEncrypt.scss';
+import './PolicyStoreEncrypt.scss'
 
 // import sub sections
-import HowWeStoreData from "../subsections/HowWeStoreData";
-import HowWeEncryptData from "../subsections/HowWeEncryptData";
+import HowWeStoreData from '../subsections/HowWeStoreData'
+import HowWeEncryptData from '../subsections/HowWeEncryptData'
 
 const PolicyStoreEncrypt = (props) => (
-  <div className="policy-store-encrypt policy-segment" id="policy-store-encrypt">
+  <div className='policy-store-encrypt policy-segment' id='policy-store-encrypt'>
     <HowWeStoreData />
     <HowWeEncryptData />
   </div>
