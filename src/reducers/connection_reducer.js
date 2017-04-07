@@ -1,6 +1,6 @@
 import { ActionTypes } from '../constants/ActionTypes'
 
-export function connectionReducer ( state = {}, action ) {
+export function connectionReducer (state = {}, action) {
   switch (action.type) {
     case ActionTypes.GetPolicyRequested:
     case ActionTypes.AddPolicyRequested:
