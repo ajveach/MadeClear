@@ -29,7 +29,8 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 const mapStateToProps = (state) => ({
-
+  policy: state.policy,
+  connection: state.connection
 })
 
 /*  Note: mapStateToProps is where you should use `reselect` to create selectors, ie:
@@ -52,6 +53,12 @@ class PolicyContainer extends React.Component {
   }
 
   render () {
+    if (this.props.connection.inProgress) {
+      return (
+        <div>Loading</div>
+      )
+    }
+
     return (
       <div className='policy-display'>
         <PolicyScrollspy {...this.props} />
@@ -70,5 +77,6 @@ export default connect(mapStateToProps, mapDispatchToProps)(PolicyContainer)
 
 PolicyContainer.propTypes = {
   onGetPolicy: React.PropTypes.func,
-  params: React.PropTypes.object
+  params: React.PropTypes.object,
+  connection: React.PropTypes.object
 }

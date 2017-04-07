@@ -8,18 +8,23 @@
   background-repeat: no-repeat;
   background-color: $color2;
   color:white;
+  position: relative;
 
   @media (min-width: 768px){
-    min-height:500px;
+    min-height:350px;
   }
 
+  a{
+    color: white;
+    text-decoration: underline;
+  }
 
   .content{
     width: 100%;
     padding:1rem;
 
     @media (min-width: 768px){
-      padding: 120px 5rem;
+      padding: 100px 5rem;
     }
 
     p{
@@ -40,11 +45,13 @@
     border-radius: 50%;
     height: 100px;
     width: 100px;
-    margin-top: -30px;
     transform: translateY(70px);
-    color: white;
+    color: #fff;
     line-height: 90px;
     cursor: pointer;
+    text-decoration: none;
+    position: absolute;
+    bottom: 15px;
 
     &:hover{
       text-decoration: none;

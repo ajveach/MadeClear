@@ -3,6 +3,26 @@ import { Col, Grid, Image, Row } from 'react-bootstrap'
 import TriggerIdentifiableData from '../../../../components/tooltips/IdentifiableData'
 
 export default class ToWhomWeSellData extends React.Component {
+  doOrDoNot (prefix) {
+    let value
+
+    if (this.props.policy[prefix + 'Yes']) {
+      value = 'yes'
+    } else if (this.props.policy[prefix + 'YesCondition']) {
+      value = 'yesWithPermission'
+    } else {
+      value = 'no'
+    }
+
+    if (value === 'yes') {
+      return <strong>do</strong>
+    } else if (value === 'yesWithPermission') {
+      return <span><strong>do</strong> (only with your permission)</span>
+    } else {
+      return <strong>do not</strong>
+    }
+  }
+
   render () {
     return (
       <div className='who-we-sell-data-to'>
@@ -15,7 +35,7 @@ export default class ToWhomWeSellData extends React.Component {
               </Col>
               <Col md={9}>
                 <h3 className='segment-subtitle'>
-                  We <strong>do</strong> sell your <TriggerIdentifiableData /> to:
+                  We {this.doOrDoNot('dataSellIdentifiable')} sell your <TriggerIdentifiableData /> to:
                 </h3>
                 <ul>
                   <li>data brokers</li>
@@ -23,7 +43,7 @@ export default class ToWhomWeSellData extends React.Component {
                   <li>analytics firms</li>
                 </ul>
                 <h3 className='segment-subtitle'>
-                  We <strong>do not</strong> sell your data AFTER removing identifiers to
+                  We {this.doOrDoNot('dataSellNotIdentifiable')} sell your data AFTER removing identifiers to
                   (note that remaining data may not be anonymous):
                 </h3>
                 <ul>
@@ -38,4 +58,8 @@ export default class ToWhomWeSellData extends React.Component {
       </div>
     )
   }
+}
+
+ToWhomWeSellData.propTypes = {
+  policy: React.PropTypes.object.isRequired
 }

@@ -1,9 +1,86 @@
 import React from 'react'
 import { Col, Grid, Image, Row } from 'react-bootstrap'
 import TriggerIdentifiableData from '../../../../components/tooltips/IdentifiableData'
+import TriggerAnalytics from '../../../../components/tooltips/Analytics'
+
+let optionsIdentifiable = {
+  dataSharingExternalDataPrimaryService: <span>To provide the primary service of the app or technology</span>,
+  dataSharingExternalDataResearch: <span>To conduct scientific research</span>,
+  dataSharingExternalDataOperations: <span>For company operations (e.g., quality control or fraud detection)</span>,
+  dataSharingExternalDataDevelopment: <span>
+    To develop and improve new and current products and services (e.g., <TriggerAnalytics />)
+  </span>
+}
+
+let optionsNonIdentifiable = {
+  dataSharingExternalDataNoIdentifiersPrimaryService: <span>
+    To provide the primary service of the app or technology
+  </span>,
+  dataSharingExternalDataNoIdentifiersResearch: <span>To conduct scientific research</span>,
+  dataSharingExternalDataNoIdentifiersOperations: <span>
+    For company operations (e.g., quality control or fraud detection)
+  </span>,
+  dataSharingExternalDataNoIdentifiersDevelopment: <span>
+    To develop and improve new and current products and services (e.g., <TriggerAnalytics />)
+  </span>
+}
 
 export default class HowWeShareData extends React.Component {
+  renderIdentifiableList () {
+    if (this.props.policy.dataSharingExternalDataNone) {
+      return
+    }
+
+    let listItems = []
+    Object.keys(optionsIdentifiable).map((key, i) => {
+      if (this.props.policy[key]) {
+        listItems.push(<li key={i}>{optionsIdentifiable[key]}</li>)
+      }
+    })
+
+    if (this.props.policy.dataSharingExternalDataOther) {
+      listItems.push(<li key={listItems.length}>{this.props.policy.dataSharingExternalDataOther}</li>)
+    }
+
+    return listItems
+  }
+
+  renderNonIdentifiableList () {
+    if (this.props.policy.dataSharingExternalDataNoIdentifiersNone) {
+      return
+    }
+
+    let listItems = []
+    Object.keys(optionsNonIdentifiable).map((key, i) => {
+      if (this.props.policy[key]) {
+        listItems.push(<li key={i}>{optionsNonIdentifiable[key]}</li>)
+      }
+    })
+
+    if (this.props.policy.dataSharingExternalDataNoIdentifiersOther) {
+      listItems.push(<li key={listItems.length}>{this.props.policy.dataSharingExternalDataNoIdentifiersOther}</li>)
+    }
+
+    return listItems
+  }
+
   render () {
+    let identifiableDataSubtitle = <h3 className='segment-subtitle'>We share your <TriggerIdentifiableData /></h3>
+    if (this.props.policy.dataSharingExternalDataNone) {
+      identifiableDataSubtitle = <h3 className='segment-subtitle'>
+        We <strong>do not</strong> share your <TriggerIdentifiableData />
+      </h3>
+    }
+
+    let nonIdentifiableDataSubtitle = <h3 className='segment-subtitle'>
+      We share your data <strong>after</strong> removing identifiers (note that remaining data may not be anonymous)
+    </h3>
+    if (this.props.policy.dataSharingExternalDataNoIdentifiersNone) {
+      nonIdentifiableDataSubtitle = <h3 className='segment-subtitle'>
+        We <strong>do not</strong> share your data after removing identifiers
+      </h3>
+    }
+
     return (
       <div className='segment-list how-we-share-data-externally'>
         <Grid>
@@ -14,14 +91,14 @@ export default class HowWeShareData extends React.Component {
                 <Image src='/img/icons/02Icon.png' />
               </Col>
               <Col md={9}>
-                <h3 className='segment-subtitle'>We share your <TriggerIdentifiableData /></h3>
+                {identifiableDataSubtitle}
                 <ul>
-                  <li>
-                    To provide the <span className='policy-tooltip'>primary service</span> of the app or technology
-                  </li>
-                  <li>To develop marketing material for our products</li>
-                  <li>To conduct scientific research</li>
-                  <li>For company operations (e.g., quality control or fraud detection)</li>
+                  {this.renderIdentifiableList()}
+                </ul>
+
+                {nonIdentifiableDataSubtitle}
+                <ul>
+                  {this.renderNonIdentifiableList()}
                 </ul>
               </Col>
             </Row>
@@ -30,4 +107,8 @@ export default class HowWeShareData extends React.Component {
       </div>
     )
   }
+}
+
+HowWeShareData.propTypes = {
+  policy: React.PropTypes.object.isRequired
 }

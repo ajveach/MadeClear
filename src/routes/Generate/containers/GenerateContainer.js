@@ -10,13 +10,17 @@ import Intro from '../components/Intro'
 import Footer from '../../../components/Footer/Footer'
 import Form from '../components/Form'
 
+import { addPolicy } from '../../../actions/add_policy'
+
 /*  Object of action creators (can also be function that returns object).
     Keys will be passed as props to presentational components. Here we are
     implementing our wrapper around increment; the component doesn't care   */
 
-const mapDispatchToProps = (dispatch) => ({
-
-})
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addPolicy: (company, product, policy) => dispatch(addPolicy(company, product, policy))
+  }
+}
 
 const mapStateToProps = (state) => ({
 

@@ -6,7 +6,7 @@ import './PolicyScrollspy.scss'
 import { OverlayTrigger, Popover } from 'react-bootstrap'
 
 const popover = (title) => (
-  <Popover className='scrollspy-popover'>
+  <Popover className='scrollspy-popover' id='scrollspy-popover'>
     {title}
   </Popover>
 )

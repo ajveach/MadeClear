@@ -2,8 +2,10 @@ import React from 'react'
 import { Popover, OverlayTrigger } from 'react-bootstrap'
 
 const popoverIdentifiableData = (
-  <Popover id='popover-identifiable-data' title='Identifiable Data'>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  <Popover id='popover-identifiable-data' className='tooltip-popover' title='Identifiable data means:'>
+    Data, such as your name, phone number, email,
+    address, health services, information on your physical or mental health conditions, or your social security number,
+    that can be used on its own or with other information to identify you.
   </Popover>
 )
 

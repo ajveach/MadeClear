@@ -1,8 +1,34 @@
 import React from 'react'
 import TriggerIdentifiableData from '../../../../components/tooltips/IdentifiableData'
 import { Col, Grid, Image, Row } from 'react-bootstrap'
+import TriggerAnalytics from '../../../../components/tooltips/Analytics'
+
+let options = {
+  dataUsageInternalDataPrimaryService: <span>To provide the primary service of the app or technology</span>,
+  dataUsageInternalDataMarketing: <span>To develop marketing material for our products</span>,
+  dataUsageInternalDataResearch: <span>To conduct scientific research</span>,
+  dataUsageInternalDataOperations: <span>For company operations (e.g., quality control or fraud detection)</span>,
+  dataUsageInternalDataDevelopment: <span>
+    To develop and improve new and current products and services (e.g., <TriggerAnalytics />)
+  </span>
+}
 
 export default class HowWeUseData extends React.Component {
+  renderList () {
+    let listItems = []
+    Object.keys(options).map((key, i) => {
+      if (this.props.policy[key]) {
+        listItems.push(<li key={i}>{options[key]}</li>)
+      }
+    })
+
+    if (this.props.policy.formDataUsageInternalDataOther) {
+      listItems.push(<li key={listItems.length}>{this.props.policy.formDataUsageInternalDataOther}</li>)
+    }
+
+    return listItems
+  }
+
   render () {
     return (
       <div className='how-we-use-identifiable-data segment-list container'>
@@ -16,12 +42,7 @@ export default class HowWeUseData extends React.Component {
               <Col md={9}>
                 <h3 className='segment-subtitle'>We collect and use your <TriggerIdentifiableData /></h3>
                 <ul>
-                  <li>
-                    To provide the <span className='policy-tooltip'>primary service</span> of the app or technology
-                  </li>
-                  <li>To develop marketing material for our products</li>
-                  <li>To conduct scientific research</li>
-                  <li>For company operations (e.g., quality control or fraud detection)</li>
+                  {this.renderList()}
                 </ul>
               </Col>
             </Row>
@@ -30,4 +51,8 @@ export default class HowWeUseData extends React.Component {
       </div>
     )
   }
+}
+
+HowWeUseData.propTypes = {
+  policy: React.PropTypes.object.isRequired
 }

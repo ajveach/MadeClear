@@ -2,37 +2,53 @@ import React from 'react'
 import Scroll from 'react-scroll'
 
 import './PolicyIntro.scss'
+import { Col, Grid, Row } from 'react-bootstrap'
 
-export const PolicyIntro = (props) => (
-  <div className='policy-intro policy-segment'>
-    <div className='container'>
-      <div className='content'>
-        <div className='row'>
-          <div className='col-md-10'>
-            <h1 className='page-title'>Policy for {props.params.productName} from {props.params.companyName}</h1>
-          </div>
-          <div className='col-md-2'>
-            <a href='https://en.wikipedia.org/wiki/Acme_Corporation' target='_blank'>
-              <img src='/img/logos/solar-logistix.png' alt='{props.params.companyName}' />
-            </a>
-          </div>
-        </div>
+export default class PolicyIntro extends React.Component {
+  hippaCoverage () {
+    if (this.props.policy.hippaCoverage) {
+      return (
         <p>
-          Please note that the health data we collect as part of this {props.params.productName}
-          are not protected by HIPAA and our company’s HIPAA Notice of Privacy Practices does not apply.</p>
-      </div>
-    </div>
-    <Scroll.Link
-      className='scroll-arrow fa fa-arrow-down'
-      aria-hidden='true'
-      to='policy-use-share-sell'
-      spy smooth duration={500}
-    />
-  </div>
-)
+          Some of the health data we collect as part of {this.props.policy.product} also are
+          protected by HIPAA.
+          Read our <a href={this.props.policy.hippaUrl} title='HIPAA Notice of Privacy Practices' target='_blank'>
+          HIPPA Notice of Privacy Practices
+          </a> for more information.
+        </p>
+      )
+    }
+    return (
+      <p>
+        Please note that the health data we collect as part of {this.props.policy.product}
+        are not protected by HIPAA and our company’s HIPAA Notice of Privacy Practices does not apply.
+      </p>
+    )
+  }
 
-export default PolicyIntro
+  render () {
+    return (
+      <div className='policy-intro policy-segment'>
+        <Grid>
+          <div className='content'>
+            <Row>
+              <Col md={10} mdOffset={1}>
+                <h1 className='page-title'>Policy for {this.props.policy.product} from {this.props.policy.company}</h1>
+              </Col>
+            </Row>
+            {this.hippaCoverage()}
+          </div>
+        </Grid>
+        <Scroll.Link
+          className='scroll-arrow fa fa-arrow-down'
+          aria-hidden='true'
+          to='policy-use-share-sell'
+          spy smooth duration={500}
+        />
+      </div>
+    )
+  }
+}
 
 PolicyIntro.propTypes = {
-  params: React.PropTypes.object
+  policy: React.PropTypes.object
 }

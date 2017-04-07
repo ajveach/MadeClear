@@ -5,8 +5,7 @@ export function getPolicy (company, product) {
   return dispatch => {
     dispatch(getPolicyRequestedAction())
 
-    return database.ref('/policies').child(company).child(product).once('value', snap => {
-      console.log(snap)
+    return database.ref('/policies').child(company.toLowerCase()).child(product.toLowerCase()).once('value', snap => {
       const policy = snap.val()
       dispatch(getPolicyFulfilledAction(policy))
     })

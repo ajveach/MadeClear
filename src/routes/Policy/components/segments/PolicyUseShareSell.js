@@ -9,9 +9,9 @@ import ToWhomWeSellData from '../subsections/ToWhomWeSellData'
 
 const PolicyUseShareSell = (props) => (
   <div className='policy-use-share-sell policy-segment' id='policy-use-share-sell'>
-    <HowWeUseData />
-    <HowWeShareData />
-    <ToWhomWeSellData />
+    <HowWeUseData {...props} />
+    <HowWeShareData {...props} />
+    <ToWhomWeSellData {...props} />
   </div>
 )
 

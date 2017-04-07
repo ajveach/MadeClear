@@ -10,3 +10,18 @@
     margin: 0 auto;
   }
 }
+
+.panel-heading{
+  a{
+    cursor: pointer;
+  }
+}
+
+.panel-subtitle{
+  margin-top: 40px;
+  font-size: 20px;
+
+  &:first-child{
+    margin-top:0;
+  }
+}
