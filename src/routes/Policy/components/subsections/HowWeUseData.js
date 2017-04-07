@@ -16,9 +16,10 @@ let options = {
 export default class HowWeUseData extends React.Component {
   renderList () {
     let listItems = []
-    Object.keys(options).map((key, i) => {
+    let i = -1
+    Object.keys(options).map((key) => {
       if (this.props.policy[key]) {
-        listItems.push(<li key={i}>{options[key]}</li>)
+        listItems.push(<li key={++i}>{options[key]}</li>)
       }
     })
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Col, Grid, Image, Row } from 'react-bootstrap'
 import TriggerIdentifiableData from '../../../../components/tooltips/IdentifiableData'
+import TriggerDataBroker from '../../../../components/tooltips/DataBroker'
 
 export default class ToWhomWeSellData extends React.Component {
   doOrDoNot (prefix) {
@@ -38,7 +39,7 @@ export default class ToWhomWeSellData extends React.Component {
                   We {this.doOrDoNot('dataSellIdentifiable')} sell your <TriggerIdentifiableData /> to:
                 </h3>
                 <ul>
-                  <li>data brokers</li>
+                  <li><TriggerDataBroker /></li>
                   <li>marketing &amp; advertising networks</li>
                   <li>analytics firms</li>
                 </ul>
@@ -47,7 +48,7 @@ export default class ToWhomWeSellData extends React.Component {
                   (note that remaining data may not be anonymous):
                 </h3>
                 <ul>
-                  <li>data brokers</li>
+                  <li><TriggerDataBroker /></li>
                   <li>marketing &amp; advertising networks</li>
                   <li>analytics firms</li>
                 </ul>

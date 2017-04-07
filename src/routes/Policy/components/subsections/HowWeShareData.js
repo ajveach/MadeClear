@@ -32,14 +32,15 @@ export default class HowWeShareData extends React.Component {
     }
 
     let listItems = []
-    Object.keys(optionsIdentifiable).map((key, i) => {
+    let i = -1
+    Object.keys(optionsIdentifiable).map((key) => {
       if (this.props.policy[key]) {
-        listItems.push(<li key={i}>{optionsIdentifiable[key]}</li>)
+        listItems.push(<li key={++i}>{optionsIdentifiable[key]}</li>)
       }
     })
 
     if (this.props.policy.dataSharingExternalDataOther) {
-      listItems.push(<li key={listItems.length}>{this.props.policy.dataSharingExternalDataOther}</li>)
+      listItems.push(<li key={listItems.length + 1}>{this.props.policy.dataSharingExternalDataOther}</li>)
     }
 
     return listItems
@@ -51,14 +52,15 @@ export default class HowWeShareData extends React.Component {
     }
 
     let listItems = []
-    Object.keys(optionsNonIdentifiable).map((key, i) => {
+    let i = -1
+    Object.keys(optionsNonIdentifiable).map((key) => {
       if (this.props.policy[key]) {
-        listItems.push(<li key={i}>{optionsNonIdentifiable[key]}</li>)
+        listItems.push(<li key={++i}>{optionsNonIdentifiable[key]}</li>)
       }
     })
 
     if (this.props.policy.dataSharingExternalDataNoIdentifiersOther) {
-      listItems.push(<li key={listItems.length}>{this.props.policy.dataSharingExternalDataNoIdentifiersOther}</li>)
+      listItems.push(<li key={listItems.length + 1}>{this.props.policy.dataSharingExternalDataNoIdentifiersOther}</li>)
     }
 
     return listItems
