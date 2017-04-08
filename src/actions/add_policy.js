@@ -1,7 +1,7 @@
 import { ActionTypes } from '../constants/ActionTypes'
 import database from '../store/database'
 
-export function addPolicy (policy) {
+export function addPolicy (policy, next) {
   return dispatch => {
     dispatch(addPolicyRequestedAction())
 
@@ -9,6 +9,7 @@ export function addPolicy (policy) {
     policyRef.set(policy)
       .then(() => {
         dispatch(addPolicyFulfilledAction(policy))
+        next()
       })
       .catch(() => {
         dispatch(addPolicyRejectedAction())

@@ -70,7 +70,10 @@ export default class Form extends React.Component {
     policy.last_modified = +new Date()
 
     this.props.addPolicy(
-      policy
+      policy,
+      () => {
+        window.scrollTo(0, 0)
+      }
     )
   }
 
