@@ -1,6 +1,7 @@
 import React from 'react'
 import { Grid, Row, Col } from 'react-bootstrap'
 import { Link } from 'react-router'
+import IconAttribution from '../attributions/IconAttribution'
 let moment = require('moment')
 
 import './Footer.scss'
@@ -49,6 +50,8 @@ export default class Footer extends React.Component {
             </Col>
           </Row>
           <div className='pull-right last-updated'>Last Updated on {this.formattedDate()}</div>
+
+          <IconAttribution />
         </Grid>
       </footer>
     )
