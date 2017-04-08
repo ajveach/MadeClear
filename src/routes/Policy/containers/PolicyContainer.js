@@ -17,6 +17,7 @@ import PolicyPolicies from '../components/segments/PolicyPolicies'
 import Footer from '../../../components/Footer/Footer'
 
 import { getPolicy } from '../../../actions/get_policy'
+import Loading from '../../../components/Loading/Loading'
 
 /*  Object of action creators (can also be function that returns object).
     Keys will be passed as props to presentational components. Here we are
@@ -55,7 +56,7 @@ class PolicyContainer extends React.Component {
   render () {
     if (this.props.connection.inProgress) {
       return (
-        <div>Loading</div>
+        <Loading />
       )
     }
 
