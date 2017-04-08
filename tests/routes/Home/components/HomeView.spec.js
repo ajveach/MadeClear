@@ -12,6 +12,6 @@ describe('(View) Home', () => {
   it('Renders the application name', () => {
     const welcome = _component.find('h1')
     expect(welcome).to.exist
-    expect(welcome.text()).to.match(/MPN Generator/)
+    expect(welcome.text()).to.match(/MadeClear/)
   })
 })

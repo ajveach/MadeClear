@@ -2,4 +2,15 @@
   padding-top:40px;
   padding-bottom:60px;
   border-bottom:1px solid white;
+
+  .action-grid{
+    max-width:850px;
+    margin:40px auto;
+  }
+
+  .grid-item{
+    display: inline-block;
+    float:none;
+    vertical-align: top;
+  }
 }

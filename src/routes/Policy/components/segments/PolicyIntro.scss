@@ -52,9 +52,14 @@
     text-decoration: none;
     position: absolute;
     bottom: 15px;
+    display:none;
 
     &:hover{
       text-decoration: none;
+    }
+
+    @media (min-width: 960px){
+      display: inline-block;
     }
   }
 }

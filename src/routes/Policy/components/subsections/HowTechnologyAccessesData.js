@@ -48,10 +48,12 @@ export default class HowTechnologyAccessesData extends React.Component {
     let i = -1
     Object.keys(permissions).map((key) => {
       if (this.props.policy[key]) {
+        let label = permissions[key].label !== 'Other' ? permissions[key].label : this.props.policy[key]
+
         items.push(
-          <Col sm={3} className='grid-item' key={++i}>
+          <Col sm={3} xs={6} className='grid-item' key={++i}>
             <Image src={'/img/icons/' + permissions[key].icon} />
-            <div className='grid-item-label'>{permissions[key].label}</div>
+            <div className='grid-item-label'>{label}</div>
           </Col>
         )
       }

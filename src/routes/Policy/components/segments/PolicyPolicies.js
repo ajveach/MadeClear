@@ -5,7 +5,7 @@ import HowWeNotify from '../subsections/HowWeNotify'
 
 const PolicyPolicies = (props) => (
   <div className='policy-policies policy-segment' id='policy-policies'>
-    <HowWeNotify />
+    <HowWeNotify {...props} />
   </div>
 )
 

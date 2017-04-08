@@ -1,7 +1,5 @@
 import React from 'react'
 import { Accordion, Checkbox, ControlLabel, FormControl, FormGroup, Panel, Radio } from 'react-bootstrap'
-import * as ReactDOM from 'react-dom'
-import TriggerCloudComputing from '../../../../components/tooltips/CloudComputing'
 
 export default class DataPrivacy extends React.Component {
   constructor (props) {
@@ -44,14 +42,14 @@ export default class DataPrivacy extends React.Component {
 
     return (
       <div className='accessInfo'>
-        <Checkbox onChange={() => this.setState({ accessInfoCamera: true })}>Camera</Checkbox>
-        <Checkbox onChange={() => this.setState({ accessInfoPhotos: true })}>Photos</Checkbox>
-        <Checkbox onChange={() => this.setState({ accessInfoContacts: true })}>Contacts</Checkbox>
-        <Checkbox onChange={() => this.setState({ accessInfoLocationServices: true })}>
+        <Checkbox onChange={(e) => this.setState({ accessInfoCamera: e.target.checked })}>Camera</Checkbox>
+        <Checkbox onChange={(e) => this.setState({ accessInfoPhotos: e.target.checked })}>Photos</Checkbox>
+        <Checkbox onChange={(e) => this.setState({ accessInfoContacts: e.target.checked })}>Contacts</Checkbox>
+        <Checkbox onChange={(e) => this.setState({ accessInfoLocationServices: e.target.checked })}>
           Location Services
         </Checkbox>
-        <Checkbox onChange={() => this.setState({ accessInfoMicrophone: true })}>Microphone</Checkbox>
-        <Checkbox onChange={() => this.setState({ accessInfoHealthMonitoringDevices: true })}>
+        <Checkbox onChange={(e) => this.setState({ accessInfoMicrophone: e.target.checked })}>Microphone</Checkbox>
+        <Checkbox onChange={(e) => this.setState({ accessInfoHealthMonitoringDevices: e.target.checked })}>
           Health Monitoring Devices
         </Checkbox>
         <FormGroup controlId='formAccessOther'>

@@ -35,7 +35,7 @@ export default class HowWeEncryptData extends React.Component {
 
     return (
       <Col md={4}>
-        <IconColumn imageSrc='/img/icons/phone-white.png'>
+        <IconColumn imageSrc='/img/icons/19Icon.png'>
           {innerElement}
         </IconColumn>
       </Col>
@@ -75,7 +75,7 @@ export default class HowWeEncryptData extends React.Component {
     if (innerElement) {
       return (
         <Col md={4}>
-          <IconColumn imageSrc='/img/icons/server-white.png'>
+          <IconColumn imageSrc='/img/icons/17Icon.png'>
             {innerElement}
           </IconColumn>
         </Col>
@@ -95,7 +95,7 @@ export default class HowWeEncryptData extends React.Component {
       case 'yesCondition': {
         innerElement = <DoesOrDoesnt value>
           encrypt your data while it is transmitted
-          if you take <TriggerEncryptionInfo info={this.props.policy.deviceEncryptionAdditionalInfo} />
+          if you take <TriggerEncryptionInfo info={this.props.policy.transmittedEncryptionAdditionalInfo} />
         </DoesOrDoesnt>
         break
       }
@@ -108,7 +108,7 @@ export default class HowWeEncryptData extends React.Component {
     if (innerElement) {
       return (
         <Col md={4}>
-          <IconColumn imageSrc='/img/icons/radio-tower-white.png'>
+          <IconColumn imageSrc='/img/icons/18Icon.png'>
             {innerElement}
           </IconColumn>
         </Col>

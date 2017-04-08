@@ -10,6 +10,11 @@ import HippaCoverage from './Panels/HippaCoverage'
 import DataStore from './Panels/DataStore'
 import DataEncrypt from './Panels/DataEncrypt'
 import DataPrivacy from './Panels/DataPrivacy'
+import DataUserOptions from './Panels/DataUserOptions'
+import DataDeactivation from './Panels/DataDeactivation'
+import DataPolicyChanges from './Panels/DataPolicyChanges'
+import DataBreachNotification from './Panels/DataBreachNotification'
+import DataGeneral from './Panels/DataGeneral'
 
 export default class Form extends React.Component {
   constructor (props) {
@@ -56,7 +61,8 @@ export default class Form extends React.Component {
     } else {
       this.setState({
         error: '',
-        success: 'This policy has been successfully updated'
+        success:
+          'This policy has been successfully updated.'
       })
     }
 
@@ -75,7 +81,20 @@ export default class Form extends React.Component {
       )
     } else if (this.state.success) {
       return (
-        <div className='alert alert-success'>{this.state.success}</div>
+        <div className='alert alert-success'>
+          {this.state.success}
+          {' '}
+          View the policy
+          {' '}
+          <a
+            href={'/policy/' + this.props.policy.company + '/' + this.props.policy.product}
+            title='View policy'
+            target='_blank'
+          >
+            {' '}
+            here
+          </a>
+        </div>
       )
     }
 
@@ -120,6 +139,11 @@ export default class Form extends React.Component {
             <DataStore submitHooks={this.submitHooks} />
             <DataEncrypt submitHooks={this.submitHooks} />
             <DataPrivacy submitHooks={this.submitHooks} />
+            <DataUserOptions submitHooks={this.submitHooks} />
+            <DataDeactivation submitHooks={this.submitHooks} />
+            <DataPolicyChanges submitHooks={this.submitHooks} />
+            <DataBreachNotification submitHooks={this.submitHooks} />
+            <DataGeneral submitHooks={this.submitHooks} />
 
             <input type='submit' value='Submit' className='btn btn-lg btn-primary' />
           </form>
@@ -132,5 +156,6 @@ export default class Form extends React.Component {
 Form.propTypes = {
   company: React.PropTypes.string,
   product: React.PropTypes.string,
-  addPolicy: React.PropTypes.func
+  addPolicy: React.PropTypes.func,
+  policy: React.PropTypes.object
 }

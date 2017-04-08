@@ -7,7 +7,6 @@ import React from 'react'
     component - in this case, the counter:   */
 
 import Intro from '../components/Intro'
-import Footer from '../../../components/Footer/Footer'
 import Form from '../components/Form'
 
 import { addPolicy } from '../../../actions/add_policy'
@@ -23,7 +22,7 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 const mapStateToProps = (state) => ({
-
+  policy: state.policy
 })
 
 /*  Note: mapStateToProps is where you should use `reselect` to create selectors, ie:
@@ -46,7 +45,6 @@ class GenerateContainer extends React.Component {
       <div className='generate-display'>
         <Intro {...this.props} />
         <Form {...this.props} />
-        <Footer {...this.props} />
       </div>
     )
   }

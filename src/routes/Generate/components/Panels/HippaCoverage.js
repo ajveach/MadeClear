@@ -36,7 +36,7 @@ export default class HippaCoverage extends React.Component {
       urlField = <FormGroup controlId='formHippaUrl'>
         <ControlLabel className='sr-only'>URL to HIPPA Notice of Privacy Practices</ControlLabel>
         <FormControl
-          type='text'
+          type='url'
           value={this.props.hippaUrl}
           placeholder='URL to HIPPA Notice of Privacy Practices'
           ref='hippaUrl'

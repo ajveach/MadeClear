@@ -1,7 +1,5 @@
 import React from 'react'
 import { Accordion, ControlLabel, FormGroup, Panel, Radio } from 'react-bootstrap'
-import TriggerIdentifiableData from '../../../../components/tooltips/IdentifiableData'
-import TriggerDataBroker from '../../../../components/tooltips/DataBroker'
 import * as ReactDOM from 'react-dom'
 
 export default class DataStore extends React.Component {
