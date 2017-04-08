@@ -11,6 +11,7 @@ export default class PolicyIntro extends React.Component {
         <p>
           Some of the health data we collect as part of {this.props.policy.product} also are
           protected by HIPAA.
+          <br />
           Read our <a href={this.props.policy.hippaUrl} title='HIPAA Notice of Privacy Practices' target='_blank'>
           HIPPA Notice of Privacy Practices
           </a> for more information.
@@ -20,6 +21,7 @@ export default class PolicyIntro extends React.Component {
     return (
       <p>
         Please note that the health data we collect as part of {this.props.policy.product}
+        {' '}
         are not protected by HIPAA and our company’s HIPAA Notice of Privacy Practices does not apply.
       </p>
     )
