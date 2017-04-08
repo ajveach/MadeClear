@@ -1,7 +1,7 @@
 import React from 'react'
 import Attribution from './Attribution'
 
-export default class IconAttribution extends React.Component{
+export default class IconAttribution extends React.Component {
   render () {
     return (
       <Attribution>
