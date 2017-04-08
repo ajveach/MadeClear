@@ -55,7 +55,7 @@ export default class DataUserOptions extends React.Component {
           <FormGroup>
             <Radio
               inline
-              name='dataAccessesOther'
+              name='userOptionsAvailable'
               value='yes'
               onChange={() => this.setState({ userOptionsAvailable: true })}
             >
@@ -64,7 +64,7 @@ export default class DataUserOptions extends React.Component {
             {' '}
             <Radio
               inline
-              name='dataAccessesOther'
+              name='userOptionsAvailable'
               value='no'
               onChange={() => this.setState({ userOptionsAvailable: false })}
             >
