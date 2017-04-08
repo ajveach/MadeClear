@@ -8,8 +8,8 @@ import HowWeEncryptData from '../subsections/HowWeEncryptData'
 
 const PolicyStoreEncrypt = (props) => (
   <div className='policy-store-encrypt policy-segment' id='policy-store-encrypt'>
-    <HowWeStoreData />
-    <HowWeEncryptData />
+    <HowWeStoreData {...props} />
+    <HowWeEncryptData {...props} />
   </div>
 )
 

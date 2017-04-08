@@ -7,6 +7,9 @@ import DataUsage from './Panels/DataUsage'
 import DataSharing from './Panels/DataSharing'
 import DataSell from './Panels/DataSell'
 import HippaCoverage from './Panels/HippaCoverage'
+import DataStore from './Panels/DataStore'
+import DataEncrypt from './Panels/DataEncrypt'
+import DataPrivacy from './Panels/DataPrivacy'
 
 export default class Form extends React.Component {
   constructor (props) {
@@ -114,6 +117,9 @@ export default class Form extends React.Component {
             <DataUsage submitHooks={this.submitHooks} />
             <DataSharing submitHooks={this.submitHooks} />
             <DataSell submitHooks={this.submitHooks} />
+            <DataStore submitHooks={this.submitHooks} />
+            <DataEncrypt submitHooks={this.submitHooks} />
+            <DataPrivacy submitHooks={this.submitHooks} />
 
             <input type='submit' value='Submit' className='btn btn-lg btn-primary' />
           </form>

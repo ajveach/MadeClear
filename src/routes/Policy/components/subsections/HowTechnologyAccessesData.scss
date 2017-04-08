@@ -5,6 +5,19 @@
   border-bottom:1px solid white;
 
   .permission-grid{
-    margin-top:40px;
+    margin-top: 40px;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .grid-item{
+    display: inline-block;
+    float:none;
+    height:215px;
+  }
+
+  .shareInfo{
+    margin-top:60px;
   }
 }

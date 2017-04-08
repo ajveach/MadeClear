@@ -9,8 +9,8 @@ import WhatHappensToData from '../subsections/WhatHappensToData'
 
 const PolicyOptionsDeactivation = (props) => (
   <div className='policy-options-deactivation policy-segment' id='policy-options-deactivation'>
-    <HowTechnologyAccessesData />
-    <WhatCanYouDo />
+    <HowTechnologyAccessesData {...props} />
+    <WhatCanYouDo {...props} />
     <WhatHappensToData {...props} />
   </div>
 )
