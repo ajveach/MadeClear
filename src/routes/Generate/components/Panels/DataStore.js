@@ -16,7 +16,7 @@ export default class DataStore extends React.Component {
   render () {
     return (
       <Accordion>
-        <Panel header={'Store: Where do you store your users\' data?'} eventKey='1'>
+        <Panel header={'Store: How we store your data'} eventKey='1'>
           <ControlLabel>
             We store your data on the device
           </ControlLabel>

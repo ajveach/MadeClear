@@ -23,7 +23,7 @@ export default class DataDeactivation extends React.Component {
     return (
       <Accordion>
         <Panel
-          header={'Data Deactivation: What happens to your users\' data when the account is deactivated?'}
+          header={'Deactivation: What happens to your data when your account is deactivated'}
           eventKey='1'
         >
           <ControlLabel>

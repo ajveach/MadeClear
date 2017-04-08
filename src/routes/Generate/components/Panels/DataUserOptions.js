@@ -48,7 +48,7 @@ export default class DataUserOptions extends React.Component {
   render () {
     return (
       <Accordion>
-        <Panel header={'User Options: What can your users\' do with the data that you collect?'} eventKey='1'>
+        <Panel header={'User Options: What you can do with the data that we collect'} eventKey='1'>
           <ControlLabel>
             With this technology or app you can access, edit, share, or delete the data we have about you
           </ControlLabel>

@@ -22,7 +22,7 @@ export default class DataPolicyChanges extends React.Component {
     return (
       <Accordion>
         <Panel
-          header={'Policy Changes: How will you notify your users if your privacy policy changes?'}
+          header={'Policy Changes: How we will notify you if our privacy policy changes'}
           eventKey='1'
         >
           <ControlLabel>

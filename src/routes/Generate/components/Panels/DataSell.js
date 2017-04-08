@@ -18,7 +18,7 @@ export default class DataSell extends React.Component {
   render () {
     return (
       <Accordion>
-        <Panel header={'Sell: To whom do your sell your users\' data?'} eventKey='1'>
+        <Panel header={'Sell: Who we sell your data to'} eventKey='1'>
           <ControlLabel>
             We sell your <TriggerIdentifiableData /> to <TriggerDataBroker />,
             marketing, advertising networks, or analytics firms:

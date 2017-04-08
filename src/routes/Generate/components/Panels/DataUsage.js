@@ -20,7 +20,7 @@ export default class DataUsage extends React.Component {
   render () {
     return (
       <Accordion>
-        <Panel header={'Use: How do you use your users\' data internally?'} eventKey='1'>
+        <Panel header={'Use:  How we use your data internally'} eventKey='1'>
           <h3 className='panel-subtitle'>
             We collect and use your <TriggerIdentifiableData /> (check all that apply):
           </h3>

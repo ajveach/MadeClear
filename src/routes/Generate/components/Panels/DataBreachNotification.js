@@ -23,7 +23,7 @@ export default class DataBreachNotification extends React.Component {
     return (
       <Accordion>
         <Panel
-          header={'Breach: How will you notify your users and protect their data in case of an improper disclosure?'}
+          header={'Breach: How we will notify you and protect your data in case of an improper disclosure'}
           eventKey='1'
         >
           <ControlLabel>

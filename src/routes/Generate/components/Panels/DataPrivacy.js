@@ -92,7 +92,7 @@ export default class DataPrivacy extends React.Component {
   render () {
     return (
       <Accordion>
-        <Panel header={'Privacy: How this technology accesses other data?'} eventKey='1'>
+        <Panel header={'Privacy: How this technology accesses other data'} eventKey='1'>
           <ControlLabel>
             This technology or app requests access to other device data or applications,
             such as your phone's camera, photos, or contacts

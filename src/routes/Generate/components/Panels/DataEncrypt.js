@@ -88,7 +88,7 @@ export default class DataEncrypt extends React.Component {
   render () {
     return (
       <Accordion>
-        <Panel header={'Encryption: How do you encrypt your users\' data?'} eventKey='1'>
+        <Panel header={'Encryption: How we encrypt your data'} eventKey='1'>
           <ControlLabel>
             We encrypt your data in the device or app
           </ControlLabel>

@@ -26,7 +26,7 @@ export default class DataGeneral extends React.Component {
     return (
       <Accordion>
         <Panel
-          header={'Contact Us'}
+          header={'Contact Information'}
           eventKey='1'
         >
           <FormGroup controlId='primaryURL'>

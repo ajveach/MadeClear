@@ -21,7 +21,7 @@ export default class DataSharing extends React.Component {
     return (
       <Accordion>
         <Panel
-          header={'Share: How do you use your users\' data externally with other companies or entities?'}
+          header={'Share: How we share your data externally with other companies or entities'}
           eventKey='1'
         >
           <h3 className='panel-subtitle'>We share your <TriggerIdentifiableData /> (check all that apply):</h3>
