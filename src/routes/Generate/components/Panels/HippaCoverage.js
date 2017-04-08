@@ -46,7 +46,7 @@ export default class HippaCoverage extends React.Component {
 
     return (
       <Accordion>
-        <Panel header={'Hippa Coverage'} eventKey='1'>
+        <Panel header={'HIPAA Coverage'} eventKey='1'>
           <Checkbox
             value
             ref='hippaCoverage'
