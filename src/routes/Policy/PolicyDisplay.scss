@@ -1,6 +1,10 @@
 .policy-display{
   margin:0 auto;
   font-size:1.3em;
+
+  .segment-title{
+    font-weight:800;
+  }
 }
 
 .policy-segment{
@@ -9,7 +13,7 @@
 
 .segment-title{
   font-weight:bold;
-  font-size:3.5rem;
+  font-size:4rem;
   text-align:center;
   max-width:800px;
   margin-left:auto;
