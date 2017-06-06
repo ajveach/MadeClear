@@ -10,6 +10,8 @@ including the methods to run webpack dev server, lint, test, and deploy. Most of
 Those interested in forking this repository to continue development should study the structure
 outlined below.
 
+[See demo](http://madeclear.io)
+
 ## Differences from React Redux Starter Kit
 This application assumes the usage of npm. Do not use yarn unless you first
 add all of the additional packages to the yarn config file.
